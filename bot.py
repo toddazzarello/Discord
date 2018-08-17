@@ -5,6 +5,9 @@ prefix = ">>>"
 bot = commands.Bot(command_prefix=prefix)
 TOKEN = XXXXXXXXXXXXXXXXXXXXXXX
 
+channel1="lfg-alliance"
+channel2="lfg-horde"
+
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -30,7 +33,9 @@ async def ping(ctx):
     await ctx.send(latency)
     
 @bot.command
-async def purge(number)
+async def purgelfg(number)
+    purge_from(channel1, 100)
+    purge_from(channel2,100)
     
 
 bot.run(TOKEN)
